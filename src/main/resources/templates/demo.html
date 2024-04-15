@@ -1,0 +1,50 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Title</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--&lt;!&ndash;<button onclick="getTimeByToken()">LẤT TIME</button>&ndash;&gt;-->
+<!--<h1 id="message"></h1>-->
+<!--</body>-->
+<!--<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>-->
+
+<!--<script>-->
+
+<!--    // function getTimeByToken(){-->
+<!--    //-->
+<!--    //     $.ajax({-->
+<!--    //         url: "/api/validateToken",-->
+<!--    //         type: "GET",-->
+<!--    //         data: { token: token },-->
+<!--    //         success: function(response) {-->
+<!--    //             console.log(response); // In ra kết quả từ endpoint-->
+<!--    //             // Xử lý kết quả, ví dụ: hiển thị thông báo cho người dùng-->
+<!--    //         },-->
+<!--    //         error: function(xhr, status, error) {-->
+<!--    //             console.error(xhr.responseText); // In ra lỗi nếu có-->
+<!--    //         }-->
+<!--    //     });-->
+<!--    //-->
+<!--    // }-->
+<!--    $(document).ready(function () {-->
+<!--        // Gọi hàm getToken từ bên trong "document.ready"-->
+<!--        function getToken() {-->
+<!--            var token = localStorage.getItem('accessToken');-->
+<!--            console.log(token);-->
+<!--            if (token != null) {-->
+<!--                $('#message').html(token)-->
+<!--            } else {-->
+<!--                $('#message').html("token đã hết time")-->
+
+<!--            }-->
+<!--        }-->
+
+<!--        // Gọi hàm getToken-->
+<!--        getToken();-->
+<!--    });-->
+
+
+<!--</script>-->
+<!--</html>-->

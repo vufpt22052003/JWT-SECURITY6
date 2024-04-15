@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+<form id="myForm">
+    <input type="text" id="username" value="teo">
+    <input type="text" id="password" value="123">
+    <button type="button" onclick="submitForm()">Submit</button>
+</form>
+
+<script>
+    function submitForm() {
+        // Tạo đối tượng dữ liệu để chứa thông tin từ form
+        var data = {
+            username: $('#username').val(),
+            password: $('#password').val()
+        };
+
+        // Chuyển đối tượng data thành JSON
+        var jsonData = JSON.stringify(data);
+
+        // Gửi yêu cầu AJAX đến máy chủ
+        $.ajax({
+            type: 'POST',
+            url: '/api/login',
+            data: jsonData,
+            contentType: 'application/json',
+            success: function (response) {
+                console.log(response);
+                // localStorage.setItem('accessToken', response.token);
+
+            },
+            error: function (xhr, status, error) {
+                console.error('Đã có lỗi xảy ra.');
+            }
+        });
+    }
+
+</script>
+
+</body>
+</html>
